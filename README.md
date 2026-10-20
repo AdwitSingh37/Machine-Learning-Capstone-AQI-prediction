@@ -1,5 +1,32 @@
 # Air Quality Prediction — Machine Learning Capstone
 
+## Interactive AQI app
+
+**Live public app:** [AirLens AQI Predictor](https://airlens-aqi-capstone.streamlit.app/)
+
+**AirLens** is a Streamlit interface backed by a trained Random Forest model.
+Enter a city, measurement date and pollutant concentrations to get an AQI
+estimate and category, or upload a CSV and download batch predictions.
+
+```powershell
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+The exported model is included in `models/aqi_pipeline.joblib`. Its held-out
+evaluation uses 19,840 training rows and 4,961 test rows: **R² 0.864**, **RMSE
+49.7**, **MAE 22.4** AQI points. These metrics describe the deployment model,
+trained separately from the notebook comparisons. The app derives categories
+from regression estimates; it does not run the classification notebook.
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for public hosting instructions using
+Streamlit Community Cloud or the included Render configuration. The live app
+is deployed from the `main` branch with Python 3.12. Public sharing
+is enabled, and a sample prediction was verified on the hosted app.
+
+This educational demo estimates AQI from supplied daily readings. It does not
+provide live measurements or predict future pollutant levels.
+
 ## 📌 Overview
 
 This project focuses on predicting **Air Quality Index (AQI)** using machine learning techniques. The project uses historical air-quality data containing pollutant measurements and other environmental information.

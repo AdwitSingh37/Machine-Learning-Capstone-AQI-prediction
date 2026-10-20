@@ -1,0 +1,17 @@
+{
+  "model": "Random Forest",
+  "n_estimators": 100,
+  "max_depth": 20,
+  "min_samples_leaf": 2,
+  "random_state": 42,
+  "train_rows": 19840,
+  "test_rows": 4961,
+  "r2": 0.8640469762286495,
+  "rmse": 49.71162969581566,
+  "mae": 22.3846962559816,
+  "date_min": "2015-01-01",
+  "date_max": "2020-07-01",
+  "sklearn_version": "1.9.0",
+  "dataset_sha256": "3a0bd4da4f07b49e22485d558a71896a02e9da200af613c638d3758c6bc6c9af",
+  "evaluation": "Random 80:20 held-out split; preprocessing fitted only on training rows. This is not a future-date or unseen-city evaluation."
+}
